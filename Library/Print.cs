@@ -21,7 +21,7 @@ namespace Library
                 Console.WriteLine("\n Books Information-:");
                 foreach (var book in books)
                 {
-                    Console.WriteLine(string.Format("Title={0} ISBN-Number={1} Author={2} Summary={3}", book.Title, book.ISBN, string.Join(", ", book.Authors.Select(x => x.DisplayName)), book.Summary));
+                    Console.WriteLine(string.Format("Title={0} ISBN={1} Author={2} Summary={3}", book.Title, book.ISBN, string.Join(", ", book.Authors.Select(x => x.Name)), book.Summary));
                 }
             }
             else
@@ -33,14 +33,14 @@ namespace Library
             #endregion
 
             #region Magazines
-            if (magazines != null && books.Count > 0)
+            if (magazines != null && magazines.Count > 0)
             {
 
                 Console.WriteLine("\n Magazines Information:");
 
                 foreach (var magazine in magazines)
                 {
-                    Console.WriteLine(string.Format("Title={0} ISBN={1} Author={2} RDate={3}", magazine.Title, magazine.ISBN, string.Join(", ", magazine.Authors.Select(x => x.DisplayName)), magazine.ReleasedDate));
+                    Console.WriteLine(string.Format("Title={0} ISBN={1} Author={2} RDate={3}", magazine.Title, magazine.ISBN, string.Join(", ", magazine.Authors.Select(x => x.Name)), magazine.ReleasedDate));
                 }
             }
             else

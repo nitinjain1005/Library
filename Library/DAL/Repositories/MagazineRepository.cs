@@ -31,7 +31,7 @@ namespace Library.DAL.Repositories
             {
                 Title = x[0],
                 ISBN = x[1],
-                Authors = x[2].Split(',').ToList().Select(y => authorsData.FirstOrDefault(a => a.EmailAddress.Equals(y))).ToList() ?? new List<Author>(),
+                Authors = x[2].Split(',').Select(y => authorsData.FirstOrDefault(a => a.EmailAddress.Equals(y))).ToList() ?? new List<Author>(),
                 ReleasedDate = x[3]
             }).ToList();
         }

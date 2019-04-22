@@ -5,7 +5,7 @@
         public string EmailAddress;
         public string FirstName;
         public string LastName;
-        public string DisplayName
+        public string Name
         {
             get
             {

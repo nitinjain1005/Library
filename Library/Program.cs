@@ -11,7 +11,7 @@ namespace Library
     class Program
     {
         /// <summary>
-        /// 
+        /// Main method to trigger application
         /// </summary>
         private static IServiceProvider _serviceProvider;
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace Library
                 RegisterServices();
                 var book = _serviceProvider.GetService<IExecute<Book>>();
                 var magazine = _serviceProvider.GetService<IExecute<Magazine>>();
-                Console.WriteLine("Enter your number according below: \n" +
+                Console.WriteLine("Enter number according below: \n" +
                                    "1: •	Print out all details of all books and magazines\n" +
                                    "2: •	Find and print out the details of a book or magazine by searching with an ISBN \n" +
                                    "3: •	Find and print out the details of a book or magazine for an author \n" +
